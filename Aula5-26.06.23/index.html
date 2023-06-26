@@ -7,17 +7,78 @@
 <body>
     <!-- <form> -> Esturutra base de um formulário HTML -->
     <!-- <input type=""> -> Define o tipo do texto. i.e text,e-mail,password  -->
+    <!-- accept="" para definir o tipo de arquivo aceito. Outras extensões nem aparecem -->
     <!-- <button> -> Botão -->
+    <!-- multiple="true ou false" -> True permite que seja selecionado mais de um arquivo-->
+    <!-- <select> -> Cria um dropdown. <options> serão as opções -->
+    <!-- <option disabled selected -> Cria uma opção que nao se pode ser selecionada, usada como descrição/titulo -->
+    <!-- value="" -> Indica o valor do campo entre as aspas. Caso nao tenha um value, o valor será o colocado dentro do campo. -->
+    <!-- min -> Define o número minimo para campos numéricos -->
+    <!-- max -> Define o número máximo para campos numéricos -->
+    <!-- required -> Define um campo como obrigatório, nao poderá ser enviado sem ele estar preenchido -->
         <h1>Formulários</h1>
         <form>
-            Nome:
-            <input type="text"><br>
-            E-mail:
-            <input type="e-mail"><br>
-            Senha:
-            <input type="password"><br>
-
-            <button>Enviar</button>
+            Nome: <!-- type="text" define um campo para entrada de texto -->
+            <input type="text" name="nome" placeholder="Digite aqui seu nome completo"> <br>
+            
+            E-mail: <!-- type="email" define um campo para entrada de email -->
+            <input type="email" name="email" placeholder="gabriel@example.com"> <br>
+            
+            Senha: <!-- type="password" define um campo para entrada de senha -->
+            <input type="password" name="senha"> <br>
+            
+            Idade: <!-- type="number" define um campo para entrada valores numericos -->
+            <input type="number" name="idade" min="0" max="150"> <br>
+            
+            Horário de Registro:<!-- type="time" define um campo para entrada de hora:minuto -->
+            <input type="time" value="15:00" disabled name="horario"> <br>
+    
+            Data de Nascimento: <!-- type="date" define um campo para entrada de data -->
+            <input type="date" name="dataNascimento"> <br>
+    
+            Telefone: <!-- type="tel" define um campo para entrada de telefone -->
+            <input type="tel" name="telefone"> <br>
+    
+            URL da Foto: <!-- type="url" define um campo para entrada de endereços de internet (url) -->
+            <input type="url" name="foto"> <br>
+    
+            Frente do RG: <!-- type="file" define um campo para entrada de arquivos -->
+            <input type="file" accept=".png, .jpg" multiple name="rg"> <br>
+    
+            Escolha sua cor favorita: <!-- type="color" define um campo para entrada de valor hexadeciamal de uma cor -->
+            <input type="color" name="cor" value="#FF00FF"> <br>
+    
+            Estado civil: <br> <!-- type="radio" define um campo de opção -->
+            Solteiro: <input type="radio" name="estado-civil" value="Solteiro"> <br>
+            Casado: <input type="radio" name="estado-civil" value="Casado"> <br>
+    
+            Aceito os termos de uso:
+            <input type="checkbox"> <br> <!-- type="checkbox" define uma campo marcável -->
+            Nivel de Inglês: 1 <input type="range" min="1" max="5" step="0.5"> 5 <br>
+    
+            Estado: <!-- <select> define um campo de seleção -->
+            <select name="estado">
+                <option disabled selected>Selecione um estado</option>
+                <option value="CE">Ceará</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+            </select> <br>
+    
+            Fale um pouco sobre você: <br> <!-- <textarea> define um campo para entrada texto longo -->
+            <textarea cols="30" rows="3" placeholder="Digite sua descrição">Texto padrão</textarea> <br>
+            
+            <!-- Tipos de botões:
+                button -> Botão Comum
+                submit -> Submete as informações do formulário
+                reset  -> Limpa os campos de um formulário
+            -->
+            <button type="button">Não faz nada</button>
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+            <br>
+            <input type="button" value="Não faz nada">
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
         </form>
 </body>
 </html>
