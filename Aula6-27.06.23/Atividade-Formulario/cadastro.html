@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <form action="">
+
+        <fieldset>
+            <legend>Dados Cadastrais:</legend>
+            <label for="nome">Nome Completo:</label><br>
+            <input type="text" name="nome" id="nome" maxlenght="200" placeholder="Insira seu Nome" required><br><br>
+
+            <label for="email">Digite seu e-mail aqui:*</label><br>
+            <input type="email" name="email" id="email" placeholder="seuemail@dominio.com" required><br><br>
+
+            <label for="senha">Senha:* </label><br />
+            <input type="password" name="senha" id="senha" placeholder="Insira sua Senha" required><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <label for="estado">Estado:<br></label>
+            <select name="estado" id="estado">
+                <option value="" selected disabled>Selecione o seu estado:</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select><br><br>
+
+            <label for="cidade">Cidade:*</label><br />
+            <input type="text" name="cidade" id="cidade" maxlength="100" placeholder="Insira sua Cidade"
+                required><br><br>
+
+            <label for="rua">Rua:*</label><br />
+            <input type="text" name="rua" id="rua" maxlength="150" placeholder="Insira apenas a Rua" required><br><br>
+
+            <label for="numero">Número:*</label><br />
+            <input type="text" name="numero" id="numero" maxlength="10" placeholder="Insira apenas o Numero"
+                required><br><br>
+
+            <label for="cep">CEP:*</label><br />
+            <input type="text" name="cep" id="cep" maxlength="8" placeholder="Insira seu CEP" required><br><br>
+
+            <label for="bio">Biografia:*</label><br>
+            <textarea name="bio" id="bio" cols="30" rows="4" placeholder="Digite sua descrição"></textarea><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Area de Atuação:*</legend>
+            <br><input type="radio" name="area-atuação" value="FullStack" required>FullStack<br><br>
+            <input type="radio" name="area-atuação" value="Cloud" required>Cloud<br><br>
+            <input type="radio" name="area-atuação" value="Ambos" required>Ambos<br><br>
+        </fieldset>
+        <br>
+        <button>Cadastrar</button>
+        <button type="reset">Limpar</button><br><br>
+
+        <fieldset>
+            <legend>Já Possui Cadastro? Faça o <a href="login.html">Login</a></legend>
+
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
+
+<!-- <label> -> Vincula tipo do campo com o titulo dele -->
+<!-- - nome completo da pessoa* (max. 200 caracteres); f
+- email * 
+- senha *
+- uf *
+- cidade *
+- rua *
+- numero *
+- cep *
+- bio *
+- área de atuação (fullstack, cloud, ambos)
+- botão de cadastrar e botão de limpar -->
